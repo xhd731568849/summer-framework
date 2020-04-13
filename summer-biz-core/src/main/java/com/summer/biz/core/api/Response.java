@@ -11,5 +11,4 @@ public interface Response<T> {
     String errMsg();
 
     T getResponseData();
-
 }
