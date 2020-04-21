@@ -11,6 +11,7 @@
     <modules>
         <module>summer-biz-core</module>
         <module>demos</module>
+        <module>algorithm</module>
     </modules>
 
     <dependencyManagement>
