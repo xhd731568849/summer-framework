@@ -3,29 +3,29 @@ package com.test.kuaishou;
 /**
  * 树的最远距离
  */
-public class Test1 {
+public class Test2 {
 
     //树的结构如下：
        /* 1
        4     2
          5  3  6
                  7*/
-    int maxLength = 0;
+    static int maxLength = 0;
 
     public static void main(String[] args) {
-        Test1 learnTree = new Test1();
-        learnTree.calMaxLength();
-        System.out.println("二叉树最大距离：" + learnTree.maxLength);
-    }
-
-    public void calMaxLength() {
         Node head = new Node();
         head.data = 1;        // 根节点赋初值
         makeTree(head);     // 构造一棵二叉树
-        calREC(head);       // 中序遍历 + 递归计算
+        System.out.println("二叉树最大距离：" + calMaxLength(head));
     }
 
-    public int calREC(Node head) {
+    public static int calMaxLength(Node head) {
+        calREC(head);
+        return maxLength;
+    }
+
+    //抽取辅助方法
+    public static int calREC(Node head) {
         if (head == null) return 0;
         head.leftLen = head.left == null ? 0 : calREC(head.left) + 1;
         head.rightLen = head.right == null ? 0 : calREC(head.right) + 1;
@@ -33,7 +33,7 @@ public class Test1 {
         return head.leftLen > head.rightLen ? head.leftLen : head.rightLen;
     }
 
-    public void makeTree(Node head) {
+    public static void makeTree(Node head) {
        /* 1
        4     2
          5  3  6
@@ -63,14 +63,15 @@ public class Test1 {
         //node7.parent=node6;
         node6.right = node7;
     }
+
+    public static class Node {
+        //Node parent=null;
+        Node left = null;
+        Node right = null;
+        Object data = null;
+        int leftLen;
+        int rightLen;
+    }
 }
 
 /*定义二叉树的父节点，左右子节点，数据节点*/
-class Node {
-    //Node parent=null;
-    Node left = null;
-    Node right = null;
-    Object data = null;
-    int leftLen;
-    int rightLen;
-}
