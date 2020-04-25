@@ -20,7 +20,8 @@ public class QuickSort1 {
         }
         int base = arr[low];
         int i = low, j = high;
-        while (i != j) {
+        //注意这是 < 或者 不等于 都可以
+        while (i < j) {
             //2这里都是带等于的。
             while (i < j && arr[j] >= base) {
                 j--;
