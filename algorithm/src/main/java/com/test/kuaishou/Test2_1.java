@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * 3个线程循环打印
  */
-public class Test4 {
+public class Test2_1 {
 
     static int count = 0;
 
