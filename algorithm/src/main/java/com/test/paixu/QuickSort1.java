@@ -14,12 +14,14 @@ public class QuickSort1 {
     }
 
     public static void sort(int[] arr, int low, int high) {
+        //1这里要有判断。
         if (low > high) {
             return;
         }
         int base = arr[low];
         int i = low, j = high;
         while (i != j) {
+            //2这里都是带等于的。
             while (i < j && arr[j] >= base) {
                 j--;
             }
@@ -32,6 +34,7 @@ public class QuickSort1 {
                 arr[j] = tmp;
             }
         }
+        //这两行死记硬背一下。。。
         arr[low] = arr[i];
         arr[i] = base;
         sort(arr, low, i - 1);
