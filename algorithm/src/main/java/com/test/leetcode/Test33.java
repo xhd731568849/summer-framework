@@ -37,6 +37,7 @@ public class Test33 {
                 return mid;
             }
             if (nums[l] <= nums[mid]) {
+                //这里之所以不写 target<=nums[mid] 是因为 target=nums[mid] 在上面包含了。
                 if (nums[l] <= target && target < nums[mid]) {
                     r = mid - 1;
                 } else {
