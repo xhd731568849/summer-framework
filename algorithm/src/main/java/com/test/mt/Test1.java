@@ -34,7 +34,7 @@ public class Test1 {
             return new ReturnType(false, 0);
         }
 
-        ReturnType rightReturn = isBalance(left);
+        ReturnType rightReturn = isBalance(right);
         if (!rightReturn.isBalance) {
             return new ReturnType(false, 0);
         }
