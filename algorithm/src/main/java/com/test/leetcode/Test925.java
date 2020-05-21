@@ -1,8 +1,17 @@
 package com.test.leetcode;
 
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
+
 public class Test925 {
 
+    
 
+    public static void main(String[] args) {
+        System.out.println(Integer.MIN_VALUE);
+
+    }
 
     public static boolean isLongPressedName(String name, String typed) {
         int i = 0;
