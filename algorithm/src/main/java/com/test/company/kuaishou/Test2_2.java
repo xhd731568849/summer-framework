@@ -1,4 +1,4 @@
-package com.test.kuaishou;
+package com.test.company.kuaishou;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;

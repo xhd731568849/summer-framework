@@ -1,4 +1,4 @@
-package com.test.kuaishou;
+package com.test.company.kuaishou;
 
 public class Test2_3 {
 

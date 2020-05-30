@@ -1,4 +1,4 @@
-package com.test.mt;
+package com.test.company.mt;
 
 public class Test1 {
 

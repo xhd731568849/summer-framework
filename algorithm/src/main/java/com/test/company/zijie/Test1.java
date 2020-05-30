@@ -1,4 +1,4 @@
-package com.test.zijie;
+package com.test.company.zijie;
 
 /**
  * 求二叉树第n层的节点个数

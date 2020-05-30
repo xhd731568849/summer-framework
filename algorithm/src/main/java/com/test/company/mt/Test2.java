@@ -1,4 +1,4 @@
-package com.test.mt;
+package com.test.company.mt;
 
 import java.util.Stack;
 

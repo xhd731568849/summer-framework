@@ -1,6 +1,6 @@
 package com.test;
 
-public class Demo {
+public class ZheBan {
     public static void main(String[] args) {
         int[] arr = {3,5,6,7,8,9,10,15,184};
         //System.out.println(get(arr,8));

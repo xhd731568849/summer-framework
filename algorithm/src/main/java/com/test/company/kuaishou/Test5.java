@@ -1,9 +1,7 @@
-package com.test.kuaishou;
+package com.test.company.kuaishou;
 
 import com.test.common.ListNode;
 import com.test.common.TreeNode;
-
-import java.util.List;
 
 public class Test5 {
 

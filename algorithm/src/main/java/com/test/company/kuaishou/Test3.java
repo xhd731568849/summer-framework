@@ -1,4 +1,4 @@
-package com.test.kuaishou;
+package com.test.company.kuaishou;
 
 import java.util.ArrayList;
 import java.util.List;

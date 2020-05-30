@@ -1,4 +1,4 @@
-package com.test.kuaishou;
+package com.test.company.kuaishou;
 
 import com.test.common.MyUtil;
 import com.test.common.TreeNode;

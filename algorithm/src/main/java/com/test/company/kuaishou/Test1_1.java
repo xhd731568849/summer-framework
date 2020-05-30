@@ -1,43 +1,35 @@
-package com.test.kuaishou;
+package com.test.company.kuaishou;
 
-/**
- * 树的最远距离
- */
-public class Test1 {
-
-    //树的结构如下：
-       /* 1
-       4     2
-         5  3  6
-                 7*/
-    int maxLength = 0;
+public class Test1_1 {
 
     public static void main(String[] args) {
-        Test1 learnTree = new Test1();
-        learnTree.calMaxLength();
-        System.out.println("二叉树最大距离：" + learnTree.maxLength);
+        Node node = makeTree();
+        calLength(node);
+        System.out.println(maxLength);
     }
 
-    public void calMaxLength() {
-        Node head = new Node();
-        head.data = 1;        // 根节点赋初值
-        makeTree(head);     // 构造一棵二叉树
-        calREC(head);       // 中序遍历 + 递归计算
+    static int maxLength = 0;
+
+    private static int calLength(Node node) {
+        if (node == null) {
+            return 0;
+        }
+        node.leftLen = node.left == null ? 0 : calLength(node.left) + 1;
+        node.rightLen = node.right == null ? 0 : calLength(node.right) + 1;
+        if (node.leftLen + node.rightLen > maxLength) {
+            maxLength = node.leftLen + node.rightLen;
+        }
+        return node.leftLen > node.rightLen ? node.leftLen : node.rightLen;
     }
 
-    public int calREC(Node head) {
-        if (head == null) return 0;
-        head.leftLen = head.left == null ? 0 : calREC(head.left) + 1;
-        head.rightLen = head.right == null ? 0 : calREC(head.right) + 1;
-        if (head.leftLen + head.rightLen > maxLength) maxLength = head.leftLen + head.rightLen;
-        return head.leftLen > head.rightLen ? head.leftLen : head.rightLen;
-    }
 
-    public void makeTree(Node head) {
+    public static Node makeTree() {
        /* 1
        4     2
          5  3  6
                  7*/
+        Node head = new Node();
+        head.data = 1;
         Node node4 = new Node();
         node4.data = 4;
         //node4.parent=head;
@@ -62,7 +54,10 @@ public class Test1 {
         node7.data = 7;
         //node7.parent=node6;
         node6.right = node7;
+
+        return head;
     }
+
 
     /*定义二叉树的父节点，左右子节点，数据节点*/
     public static class Node {
@@ -74,4 +69,5 @@ public class Test1 {
         int rightLen;
     }
 }
+
 

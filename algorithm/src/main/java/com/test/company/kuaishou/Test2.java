@@ -1,4 +1,4 @@
-package com.test.kuaishou;
+package com.test.company.kuaishou;
 
 /**
  * 3个线程循环打印
