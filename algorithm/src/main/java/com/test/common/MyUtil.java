@@ -2,6 +2,19 @@ package com.test.common;
 
 public class MyUtil {
 
+    public static void printArr(int[] arr) {
+        StringBuilder res = new StringBuilder();
+        res.append("[");
+        for (int i : arr) {
+            res.append(i);
+            res.append(",");
+        }
+        res.deleteCharAt(res.length()-1);
+        res.append("]");
+        System.out.println(res);
+    }
+
+
     public static int getTreeDepth(TreeNode root) {
         return root == null ? 0 : (1 + Math.max(getTreeDepth(root.left), getTreeDepth(root.right)));
     }
